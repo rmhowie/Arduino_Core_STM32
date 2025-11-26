@@ -14200,6 +14200,23 @@ Blues.menu.pnum.CYGNET.pid.0=0x0003
 Blues.menu.pnum.CYGNET.openocd.target=stm32l4x
 Blues.menu.pnum.CYGNET.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32L4xx/STM32L433.svd
 
+# BinarX Payload board
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD=BinarX Rocket Payload
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.upload.maximum_size=262144
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.upload.maximum_data_size=65536
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.build.mcu=cortex-m4
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.build.fpu=-mfpu=fpv4-sp-d16
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.build.float-abi=-mfloat-abi=hard
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.build.board=BINARX_ROCKET_PAYLOAD
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.build.series=STM32L4xx
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.build.product_line=STM32L433xx
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.build.variant=STM32L4xx/L433C(B-C)(T-U)_L443CC(T-U)
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.build.peripheral_pins=-DCUSTOM_PERIPHERAL_PINS
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.vid.0=0x30A4
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.pid.0=0x0003
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.openocd.target=stm32l4x
+Blues.menu.pnum.BINARX_ROCKET_PAYLOAD.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32L4xx/STM32L433.svd
+
 # Upload menu
 Blues.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
 Blues.menu.upload_method.swdMethod.upload.protocol=swd
