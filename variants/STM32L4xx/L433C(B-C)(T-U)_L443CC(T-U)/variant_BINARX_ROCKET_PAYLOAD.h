@@ -13,52 +13,53 @@
 #pragma once
 
 /*----------------------------------------------------------------------------
- *        Arduino digital pin numbers on the right (indexes into the digitalPin[] array)
- *        and the STM32 pins they correspond to on the left.  The only apparent
- *        function I can see is to reference a pin in a sketch in something
- *        like digitalWrite() and have it index into digitalPin[] to find the
- *        actual pin.  On the other hand, PIN_A* are numbers offset by PNUM_ANALOG_BASE,
- *        which serves to say that this IS an analog pin and which tells analogWrite
- *        to index into the digitalPin[] array to find the actual pin.
+ *        STM32 pin numbers
  *----------------------------------------------------------------------------*/
-#define PA0                     PIN_A0  // A0/D0
-#define PA1                     PIN_A1  // A1/D1
-#define PA2                     PIN_A2  // A2/D2
-#define PA3                     PIN_A3  // A3/D3
-#define PB1                     PIN_A4  // A4/D4
-#define PB8                     5       // D5
-#define PB9                     6       // D6
-#define PA4                     PIN_A6  // BAT_VOLTAGE
-#define PA8                     8       // LED_BUILTIN
-#define PB14                    9       // D9
-#define PB13                    10      // D10
-#define PB0                     11      // D11
-#define PB15                    12      // D12
-#define PB4                     13      // D13
-#define PA5                     14      // CK
-#define PA6                     15      // MI
-#define PA7                     PIN_A5  // A5
-#define PA9                     17      // TX
-#define PA10                    18      // RX
-#define PA11                    19      // USB_DM
-#define PA12                    20      // USB_DP
-#define PA13                    21      // SWDIO
-#define PA14                    22      // SWCLK
-#define PA15                    23      // CHARGE_DETECT
-#define PB3                     24      // USB_DETECT
-#define PB5                     25      // MO
-#define PB6                     26      // SCL
-#define PB7                     27      // SDA
-#define PB10                    28      // LPUART1_VCP_RX
-#define PB11                    29      // LPUART1_VCP_TX
-#define PC13                    30      // USER_BTN
-#define PC14                    31      // OSC32_IN
-#define PC15                    32      // OSC32_OUT
-#define PH0                     33      // ENABLE_3V3
-#define PH1                     34      // DISCHARGE_3V3
-#define PH3                     35      // B
+// Analog Pins
+#define PA0                     PIN_A0   // ADC1_IN5
+#define PA1                     PIN_A1   // ADC1_IN6
+#define PA2                     PIN_A2   // ADC1_IN7
+#define PA3                     PIN_A3   // ADC1_IN8
+#define PA4                     PIN_A4   // ADC1_IN9
+#define PA5                     PIN_A5   // SPI1_SCK
+#define PA6                     PIN_A6   // SPI1_POCI
+#define PA7                     PIN_A7   // SPI1_PICO
+#define PB0                     PIN_A8   // SPI1_CS
+#define PB1                     PIN_A9   // PB1
+// Digital Pins
+#define PB10                    0        // LPUART1_RX
+#define PB11                    1        // LPUART1_TX
+#define PB12                    2        // SPI2_CS
+#define PB13                    3        // SPI2_SCK
+#define PB14                    4        // SPI2_POCI
+#define PB15                    5        // SPI2_PICO
+#define PA8                     6        // USER_SW
+#define PA9                     7        // DEBUG_UART_TX
+#define PA10                    8        // DEBUG_UART_RX
+#define PA15                    9        // PA15
+#define PB4                     10       // PB4
+#define PB5                     11       // PB5
+#define PB6                     12       // I2C1_SCL
+#define PB7                     13       // I2C1_SDA
+#define PB8                     14       // PB8
+#define PB9                     15       // PB9
+#define PB2                     16       // PB2
+// Board Defined Functionality
+#define PC13                    17       // CARD_DETECT
+#define PH3                     18       // BOOT0
+// Other Pins
+#define PA11                    19       // USB_D_N
+#define PA12                    20       // USB_D_P
+#define PA13                    21       // SWDIO
+#define PA14                    22       // SWCLK
+#define PB3                     23       // SWO
+#define PC14                    24       // OSC_32_IN
+#define PC15                    25       // OSC_32_OUT
+#define PH0                     26       // OSC_IN
+#define PH1                     27       // OSC_OUT
 
-// Alternate pins number
+
+// Alternate pins number //TODO RMH
 #define PA1_ALT1                (PA1  | ALT1)
 #define PA2_ALT1                (PA2  | ALT1)
 #define PA3_ALT1                (PA3  | ALT1)
@@ -73,31 +74,33 @@
 #define PB14_ALT1               (PB14 | ALT1)
 #define PB15_ALT1               (PB15 | ALT1)
 
-#define NUM_DIGITAL_PINS        36
-#define NUM_ANALOG_INPUTS       7
+#define NUM_DIGITAL_PINS        38
+#define NUM_ANALOG_INPUTS       10
 
 // On-board LED pin number
-#ifndef LED_BUILTIN
-  #define LED_BUILTIN           PA8
-#endif
+// No controllable LED on board.
+// #ifndef LED_BUILTIN
+//   #define LED_BUILTIN           PA8
+// #endif
 
 // On-board user button
 #ifndef USER_BTN
-  #define USER_BTN              PC13
+  #define USER_BTN              PA8
 #endif
 
 // Power switch ENABLE and DISCHARGE pins
-#ifndef ENABLE_3V3
-  #define ENABLE_3V3            PH0
-#endif
-#ifndef DISCHARGE_3V3
-  #define DISCHARGE_3V3         PH1
-  #define DISABLE_DISCHARGING   HIGH
-  #define ENABLE_DISCHARGING    LOW
-#endif
-#ifndef CHARGE_DETECT
-  #define CHARGE_DETECT         PA15
-#endif
+// Not relevant to this board.
+// #ifndef ENABLE_3V3
+//   #define ENABLE_3V3            PH0
+// #endif
+// #ifndef DISCHARGE_3V3
+//   #define DISCHARGE_3V3         PH1
+//   #define DISABLE_DISCHARGING   HIGH
+//   #define ENABLE_DISCHARGING    LOW
+// #endif
+// #ifndef CHARGE_DETECT
+//   #define CHARGE_DETECT         PA15
+// #endif
 
 // SPI definitions
 #ifndef PIN_SPI_SS
