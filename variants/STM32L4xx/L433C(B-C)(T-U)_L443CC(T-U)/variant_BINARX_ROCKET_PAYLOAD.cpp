@@ -18,15 +18,16 @@
 
 // Digital PinName array
 const PinName digitalPin[] = {
-  PA_0,   // 0 - D0/A0
-  PA_1,   // 1 - D1/A1
-  PA_2,   // 2 - D2/A2
-  PA_3,   // 3 - D3/A3
-  PB_1,   // 4 - D4/A4
-  PB_8,   // 5 - D5
-  PB_9,   // 6 - D6
-  PA_4,   // 7 - BAT_VOLTAGE
-  PA_8,   // 8 - LED_BUILTIN
+  PB_10,   // 0 - LPUART1_RX
+  PB_11,   // 1 - LPUART1_TX
+  PB_12,   // 2 - SPI2_CS
+  PB_13,   // 3 - SPI2_SCK
+  PB_14,   // 4 - SPI2_POCI
+  PB_15,   // 5 - SPI2_PICO
+  PA_8,   // 6 - USER_SW
+  PA_9,   // 7 - DEBUG_UART_TX
+  PA_10,   // 8 - DEBUG_UART_RX
+  // RMH Todo lists below
   PB_14,  // 9 - D9
   PB_13,  // 10 - D10
   PB_0,   // 11 - D11

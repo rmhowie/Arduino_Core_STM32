@@ -15,17 +15,6 @@
 /*----------------------------------------------------------------------------
  *        STM32 pin numbers
  *----------------------------------------------------------------------------*/
-// Analog Pins
-#define PA0                     PIN_A0   // ADC1_IN5
-#define PA1                     PIN_A1   // ADC1_IN6
-#define PA2                     PIN_A2   // ADC1_IN7
-#define PA3                     PIN_A3   // ADC1_IN8
-#define PA4                     PIN_A4   // ADC1_IN9
-#define PA5                     PIN_A5   // SPI1_SCK
-#define PA6                     PIN_A6   // SPI1_POCI
-#define PA7                     PIN_A7   // SPI1_PICO
-#define PB0                     PIN_A8   // SPI1_CS
-#define PB1                     PIN_A9   // PB1
 // Digital Pins
 #define PB10                    0        // LPUART1_RX
 #define PB11                    1        // LPUART1_TX
@@ -57,7 +46,17 @@
 #define PC15                    25       // OSC_32_OUT
 #define PH0                     26       // OSC_IN
 #define PH1                     27       // OSC_OUT
-
+// Analog Pins
+#define PA0                     PIN_A0   // ADC1_IN5
+#define PA1                     PIN_A1   // ADC1_IN6
+#define PA2                     PIN_A2   // ADC1_IN7
+#define PA3                     PIN_A3   // ADC1_IN8
+#define PA4                     PIN_A4   // ADC1_IN9
+#define PA5                     PIN_A5   // SPI1_SCK
+#define PA6                     PIN_A6   // SPI1_POCI
+#define PA7                     PIN_A7   // SPI1_PICO
+#define PB0                     PIN_A8   // SPI1_CS
+#define PB1                     PIN_A9   // PB1
 
 // Alternate pins number //TODO RMH
 #define PA1_ALT1                (PA1  | ALT1)
