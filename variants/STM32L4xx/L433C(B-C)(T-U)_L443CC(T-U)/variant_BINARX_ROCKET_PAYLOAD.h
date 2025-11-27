@@ -84,8 +84,8 @@
 // #endif
 
 // On-board user button
-#ifndef USER_BTN
-  #define USER_BTN              PA8
+#ifndef USER_SW
+  #define USER_SW              PA8
 #endif
 
 // Power switch ENABLE and DISCHARGE pins
@@ -104,7 +104,7 @@
 
 // SPI definitions
 #ifndef PIN_SPI_SS
-  #define PIN_SPI_SS            PB8  // Just default to D5, because we don't have a CS pin
+  #define PIN_SPI_SS            PB1
 #endif
 #ifndef PIN_SPI_SS1
   #define PIN_SPI_SS1           PNUM_NOT_DEFINED
@@ -116,7 +116,7 @@
   #define PIN_SPI_SS3           PNUM_NOT_DEFINED
 #endif
 #ifndef PIN_SPI_MOSI
-  #define PIN_SPI_MOSI          PB5
+  #define PIN_SPI_MOSI          PA7
 #endif
 #ifndef PIN_SPI_MISO
   #define PIN_SPI_MISO          PA6
@@ -162,16 +162,6 @@
 #endif
 #ifndef PIN_SERIAL_LP1_TX
   #define PIN_SERIAL_LP1_TX     PB11
-#endif
-
-// Virtual COM Port for Cygnet with a 14-pin STLink Connector mounted.
-// To use the STLINK's Virtual COM port, this would be added to an Arduino project:
-//     HardwareSerial SerialVCP(PIN_VCP_RX, PIN_VCP_TX);
-#ifndef PIN_VCP_RX
-  #define PIN_VCP_RX     PIN_SERIAL_LP1_RX
-#endif
-#ifndef PIN_VCP_TX
-  #define PIN_VCP_TX     PIN_SERIAL_LP1_TX
 #endif
 
 // Extra HAL modules
