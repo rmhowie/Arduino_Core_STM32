@@ -81,6 +81,8 @@ extern "C" {
   
 // }
 
+// Unsure why other configs don't work
+
 /**
   * @brief  System Clock Configuration
   * @param  None
